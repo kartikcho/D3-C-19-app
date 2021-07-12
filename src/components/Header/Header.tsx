@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/dist/client/router';
 import { useEffect, useState } from 'react';
-import classNames from 'classnames';
+import cx from 'classnames';
 
 import Logo from '../../../public/assets/logo.png';
 
@@ -39,18 +39,16 @@ export default function Header() {
 		// TODO: Use react helmet?
 		<header className="text-green-800 body-font">
 			<div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-				<div className="flex title-font font-medium items-center text-green-900 mb-4 md:mb-0">
+				<div className="flex title-font font-medium items-center text-green-800 mb-4 md:mb-0">
+					<Image height='60px' width='60px' alt="Logo" src={Logo} />
 					<Link href="/" passHref>
-						<>
-							<Image alt="Logo" src={Logo} />
-							<span className="ml-3 font-bold text-lg">COVID-19</span>
-						</>
+							<span className="ml-3 font-bold text-lg cursor-pointer">COVID-19</span>
 					</Link>
 				</div>
 				<nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
 					<Link href="/" passHref>
-						<div
-							className={classNames(
+						<span
+							className={cx(
 								'px-6 py-2 hover:text-customred transition duration-200 ease-in-out cursor-pointer',
 								{
 									'text-customred':
@@ -60,11 +58,11 @@ export default function Header() {
 						>
 							Overview
 							<div
-								className={classNames('h-1 w-1 mx-auto bg-white rounded', {
-									'bg-red-500': activeRef === 'index',
+								className={cx('h-1 w-1 mx-auto bg-white rounded', {
+									'bg-customred': activeRef === 'index',
 								})}
 							></div>
-						</div>
+						</span>
 					</Link>
 					<Link
 						href={{
@@ -74,7 +72,7 @@ export default function Header() {
 						passHref
 					>
 						<span
-							className={classNames(
+							className={cx(
 								'px-6 py-2 hover:text-customred transition duration-200 ease-in-out cursor-pointer',
 								{
 									'text-customred': activeRef === 'contagion',
@@ -83,8 +81,8 @@ export default function Header() {
 						>
 							Contagion
 							<div
-								className={classNames('h-1 w-1 mx-auto bg-white rounded', {
-									'bg-red-500': activeRef === 'contagion',
+								className={cx('h-1 w-1 mx-auto bg-white rounded', {
+									'bg-customred': activeRef === 'contagion',
 								})}
 							></div>
 						</span>
@@ -97,7 +95,7 @@ export default function Header() {
 						passHref
 					>
 						<span
-							className={classNames(
+							className={cx(
 								'px-6 py-2 hover:text-customred transition duration-200 ease-in-out cursor-pointer',
 								{
 									'text-customred': activeRef === 'symptoms',
@@ -106,8 +104,8 @@ export default function Header() {
 						>
 							Symptoms
 							<div
-								className={classNames('h-1 w-1 mx-auto bg-white rounded', {
-									'bg-red-500': activeRef === 'symptoms',
+								className={cx('h-1 w-1 mx-auto bg-white rounded', {
+									'bg-customred': activeRef === 'symptoms',
 								})}
 							></div>
 						</span>
@@ -120,7 +118,7 @@ export default function Header() {
 						passHref
 					>
 						<span
-							className={classNames(
+							className={cx(
 								'px-6 py-2 hover:text-customred transition duration-200 ease-in-out cursor-pointer',
 								{
 									'text-customred': activeRef === 'prevention',
@@ -129,8 +127,8 @@ export default function Header() {
 						>
 							Prevention
 							<div
-								className={classNames('h-1 w-1 mx-auto bg-white rounded', {
-									'bg-red-500': activeRef === 'prevention',
+								className={cx('h-1 w-1 mx-auto bg-white rounded', {
+									'bg-customred': activeRef === 'prevention',
 								})}
 							></div>
 						</span>
