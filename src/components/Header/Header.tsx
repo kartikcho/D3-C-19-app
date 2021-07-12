@@ -133,9 +133,9 @@ export default function Header() {
 							></div>
 						</span>
 					</Link>
-					<span className="ml-3 px-8 py-2 hover:bg-customred hover:text-white rounded-full border-2 border-customred text-customred transition duration-200 ease-in-out">
+					<button className="ml-3 px-8 py-2 hover:bg-customred hover:text-white rounded-full border-2 border-customred text-customred transition duration-200 ease-in-out">
 						<Link href="/">Contact</Link>
-					</span>
+					</button>
 				</nav>
 			</div>
 		</header>
