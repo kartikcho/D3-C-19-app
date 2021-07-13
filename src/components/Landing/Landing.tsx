@@ -4,7 +4,7 @@ import Button from "../Button/Button";
 
 export default function Landing() {
 	return (
-		<section className="text-gray-600 body-font">
+		<div className="text-gray-600 body-font">
 			<div className="container mx-auto flex pt-36 px-12 md:flex-row flex-col items-center">
 				<div className="md:w-1/2 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
 					<h3 className="title-font sm:text-3xl text-3xl mb-4 font-medium text-customred font-bold">COVID-19 Alert</h3>
@@ -29,6 +29,6 @@ export default function Landing() {
 					/> */}
 				</div>
 			</div>
-		</section>
+		</div>
 	);
 }

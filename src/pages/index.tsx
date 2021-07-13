@@ -7,6 +7,7 @@ import SymptomsContainer from '../components/SymptomsContainer/SymptomsContainer
 import StepsContainer from '../components/StepsContainer.tsx/StepsContainer';
 import Footer from '../components/Footer/Footer';
 import Search from '../components/Search/Search';
+import MapContainer from '../components/MapContainer/MapContainer';
 
 export default function Home() {
 	return (
@@ -22,6 +23,7 @@ export default function Home() {
 			<CardsContainer />
 			<SymptomsContainer />
 			<StepsContainer />
+			{/* <MapContainer /> */}
 			<Search />
 			<Footer />
 		</div>
