@@ -20,7 +20,7 @@ type StepImageProps = {
 
 const StepContent = ({ title, stepNumber, content }: StepProps) => {
 	return (
-		<div className="lg:w-1/2 md:w-1/2 md:pr-10 md:py-6">
+		<div className="lg:w-1/2 lg:pr-10 md:w-1/2 md:pr-0 md:py-6 my-auto">
 			<div className="flex relative pb-12">
 				<div className="flex-shrink-0 w-14 h-14 rounded-full bg-red-100 inline-flex items-center justify-center text-center text-customred font-semibold relative z-10 sm:text-4xl text-4xl">
 					{stepNumber}
@@ -38,8 +38,8 @@ const StepContent = ({ title, stepNumber, content }: StepProps) => {
 
 const StepImage = ({ imgSrc }: StepImageProps) => {
 	return (
-		<div className="lg:w-1/2 md:w-1/2 align-middle object-cover object-center rounded-lg md:mt-0 mt-12 m-auto"> 
-			<Image src={imgSrc} height="387px" width="378px" layout="fixed" alt="Illustration" />
+		<div className="lg:w-1/2 md:w-1/2 align-middle object-center md:mt-0 mt-12 mx-auto"> 
+			<Image src={imgSrc} alt="Illustration" />
 		</div>
 	);
 };

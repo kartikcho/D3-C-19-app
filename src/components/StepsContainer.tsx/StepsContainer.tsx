@@ -1,13 +1,13 @@
 import Step from '../Step/Step';
 
-import MaskGirl from '../../../public/assets/maskgirl.png';
-import washHandsGirl from '../../../public/assets/washHandsGirl.png';
-import noseRagGirl from '../../../public/assets/noseRagGirl.png';
-import socialDistanceGirl from '../../../public/assets/socialDistanceGirl.png';
+import MaskGirl from '../../../public/assets/maskGirl.svg';
+import washHandsGirl from '../../../public/assets/washHandsGirl.svg';
+import noseRagGirl from '../../../public/assets/noseRagGirl.svg';
+import socialDistanceGirl from '../../../public/assets/socialDistanceGirl.svg';
 
 export default function StepsContainer() {
 	return (
-		<div className="container px-5 py-12 mx-auto text-center text-gray-600">
+		<div className="container px-5 py-12 pb-3 mx-auto text-center text-gray-600">
 			<div className="flex flex-col text-center w-full mb-5">
 				<h3 className="title-font sm:text-2xl text-2xl mb-2 font-medium text-customred font-bold">
 					COVID-19

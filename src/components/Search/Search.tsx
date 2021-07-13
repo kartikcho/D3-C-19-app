@@ -1,4 +1,4 @@
-import Button from "../Button/Button";
+import Button from '../Button/Button';
 
 export default function Search() {
 	return (
@@ -12,14 +12,16 @@ export default function Search() {
 			</div>
 			<div className="flex flex-wrap justify-center">
 				<div className="flex w-full justify-center items-end">
-					<div className="relative mr-4 lg:w-full xl:w-1/2 w-2/4 md:w-full text-left">
+					<div className="relative lg:w-full xl:w-1/2 w-full md:w-full text-left">
 						<input
 							type="text"
 							name="email"
-                            placeholder="snmonydemo@gmail.com"
-							className="w-full bg-gray-100 bg-opacity-50 rounded focus:ring-2 focus:ring-indigo-200 focus:bg-transparent border border-gray-300 focus:border-customred text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+							placeholder="Enter Email"
+							className="w-full bg-white focus:ring-1 focus:ring-customred border border-gray-300 focus:border-customred text-base outline-none text-gray-700 py-3 px-6 leading-8 transition-colors duration-200 ease-in-out rounded-full"
 						/>
-                        <Button label="Send" />
+						<span className="absolute inset-y-0 right-0 flex items-center pr-2">
+							<Button label="Send" />
+						</span>
 					</div>
 				</div>
 			</div>

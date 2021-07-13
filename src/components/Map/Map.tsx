@@ -3,6 +3,7 @@ import ReactMapGL, { Marker, NavigationControl } from 'react-map-gl';
 
 import Tooltip from './Tooltip';
 
+// Using a public key :)
 const TOKEN =
 	'pk.eyJ1Ijoiam9udGF5eXciLCJhIjoiY2s4aXcwbnA0MGFqYjNscDZicm9haXA3cCJ9.rI3D6Y4ZETQnYukX9RCOow';
 
@@ -11,17 +12,18 @@ type Props = {
 	data: any;
 	query: string;
 	fields: string[];
+	children?: any;
 };
 
-export default function Map({ colors, data, query, fields }: Props) {
+export default function Map({ colors, data, query, fields, children }: Props) {
 	const [mapData, setMapData] = useState([]);
 	const [tooltip, setTooltip] = useState<any>(null);
 	const [viewport, setViewport] = useState({
 		width: '100%',
 		height: '100%',
-		latitude: 0,
-		longitude: 0,
-		zoom: 2,
+		latitude: 40,
+		longitude: 80,
+		zoom: 1,
 	});
 
 	const prepareData = () => {
@@ -66,22 +68,20 @@ export default function Map({ colors, data, query, fields }: Props) {
 
 	useEffect(() => {
 		prepareData();
-        console.log('data prepared');
-        console.log(mapData);
-        
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [query]);
 	return (
 		<ReactMapGL
 			{...viewport}
+            className="w-full"
 			mapboxApiAccessToken={TOKEN}
-			mapStyle="mapbox://styles/mapbox/light-v10"
+			mapStyle="mapbox://styles/mapbox/outdoors-v11"
 			onViewportChange={(viewport: any) => setViewport(viewport)}
 		>
 			{mapData.map(
 				(
 					country: {
-						coordinates: { longitude: any, latitude: any };
+						coordinates: { longitude: any; latitude: any };
 						color: any;
 						size: any;
 					},
@@ -99,7 +99,7 @@ export default function Map({ colors, data, query, fields }: Props) {
 									height: country.size,
 									width: country.size,
 								}}
-								onClick={() => setTooltip({tooltip: country})}
+								onClick={() => setTooltip(country)}
 							/>
 						</Marker>
 					);
@@ -113,6 +113,7 @@ export default function Map({ colors, data, query, fields }: Props) {
 					handleCloseTooltip={handleCloseTooltip}
 				/>
 			)}
+			{children}
 
 			<div className="map-nav">
 				<NavigationControl

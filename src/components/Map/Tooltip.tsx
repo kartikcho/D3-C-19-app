@@ -8,14 +8,14 @@ type Props = {
 
 export default function Tooltip({ details, fields, handleCloseTooltip }: Props) {
 	const regex = /\B(?=(\d{3})+(?!\d))/g;
-    
+
 	return (
 		<Popup
 			tipSize={0}
 			longitude={details.coordinates.longitude}
 			latitude={details.coordinates.latitude}
 			closeButton={true}
-			onClose={() => handleCloseTooltip()}
+			onClose={handleCloseTooltip}
 		>
 			<div className="map-tooltip">
 				<div className="map-tooltip-field">
@@ -26,7 +26,7 @@ export default function Tooltip({ details, fields, handleCloseTooltip }: Props) 
 					<div className="map-tooltip-header">{details.name}</div>
 				</div>
 
-				<div className="margin" />
+				<div className="map-tooltip-margin" />
 
 				{fields.map((field, index) => (
 					<div className="map-tooltip-field" key={index}>

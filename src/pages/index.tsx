@@ -11,21 +11,25 @@ import MapContainer from '../components/MapContainer/MapContainer';
 
 export default function Home() {
 	return (
-		<div className="px-0 lg:px-36 bg-gradient-to-b from-red-50 via-white to-white">
-			<Head>
-				<title>Ugh Another COVID Tracker</title>
-				<meta name="description" content="" />
-				<link rel="icon" href="/favicon.ico" />
-			</Head>
-			<Header />
-			<Landing />
-			<Detail />
-			<CardsContainer />
-			<SymptomsContainer />
-			<StepsContainer />
-			{/* <MapContainer /> */}
-			<Search />
-			<Footer />
-		</div>
+		<>
+			<div className="bg-gradient-to-b from-red-50 red-50 to-white">
+				<Head>
+					<title>Ugh Another COVID Tracker</title>
+					<meta name="description" content="" />
+					<link rel="icon" href="/favicon.ico" />
+				</Head>
+				<Header />
+				<Landing />
+			</div>
+			<div className="px-0 lg:px-36">
+				<Detail />
+				<CardsContainer />
+				<SymptomsContainer />
+				<StepsContainer />
+				<MapContainer />
+				<Search />
+				<Footer />
+			</div>
+		</>
 	);
 }
