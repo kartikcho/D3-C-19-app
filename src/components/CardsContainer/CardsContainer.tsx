@@ -1,8 +1,8 @@
 import Card from '../Card/Card';
 
-import wearMask from '../../../public/assets/wearmask.png';
+import wearMask from '../../../public/assets/wearmask.svg';
 import washHands from '../../../public/assets/washhands.png';
-import cup from '../../../public/assets/cup.png';
+import cup from '../../../public/assets/cup.svg';
 
 export default function CardsContainer() {
   return (

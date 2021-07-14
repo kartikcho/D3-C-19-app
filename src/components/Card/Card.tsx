@@ -8,7 +8,7 @@ type Props = {
 
 export default function Card({ label, children, imgSrc }: Props) {
   return (
-    <div className="h-full border-b-4 border-white rounded-lg overflow-hidden shadow-2xl hover:border-customred transition duration-200 ease-in-out">
+    <div className="h-full border-b-4 border-white rounded-lg overflow-hidden sm-px-2 shadow-2xl hover:border-customred transition duration-200 ease-in-out">
       <div className="object-cover object-center py-4 pt-12">
         <Image width="270px" height="250px" src={imgSrc} alt="Card Image" />
       </div>
