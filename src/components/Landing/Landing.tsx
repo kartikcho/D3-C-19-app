@@ -3,8 +3,8 @@ import Button from '../Button/Button';
 export default function Landing() {
   return (
     <div className="landing-section">
-      <div className="container lg:mx-36 mx-0 my-auto flex pt-36 md:flex-row flex-col items-center">
-        <div className="md:w-3/5 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+      <div className="container md:mx-36 mx-0 my-auto flex pt-36 md:flex-row flex-col items-center mx-auto">
+        <div className="md:w-3/5 lg:pt-12 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
           <h3 className="title-font sm:text-3xl text-3xl mb-4 font-medium text-customred font-bold pl-18">
             COVID-19 Alert
           </h3>
