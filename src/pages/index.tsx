@@ -13,7 +13,7 @@ import MapContainer from '../components/MapContainer/MapContainer';
 export default function Home() {
   return (
     <>
-      <div className="bg-gradient-to-b from-red-50 red-50 to-white">
+      <div className="bg-gradient-to-b from-red-50 via-red-50 to-white">
         <Head>
           <title>Ugh Another COVID Tracker</title>
           <meta name="description" content="" />

@@ -37,8 +37,8 @@ export default function Header() {
   }, [router]);
   return (
     // TODO: Use react helmet?
-    <header className="text-green-800 body-font">
-      <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+    <header className="text-green-800 body-font md:mx-36 mx-auto">
+      <div className="container flex flex-wrap p-5 flex-col md:flex-row items-center">
         <div className="flex title-font font-medium items-center text-green-800 mb-4 md:mb-0">
           <Image height="60px" width="60px" alt="Logo" src={Logo} />
           <Link href="/" passHref>
